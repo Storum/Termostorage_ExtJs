@@ -1,0 +1,28 @@
+{
+    "type": "Ext.container.Viewport",
+    "reference": {
+        "name": "items",
+        "type": "array"
+    },
+    "codeClass": null,
+    "userConfig": {
+        "designer|userClassName": "MyViewport",
+        "id": "id_x",
+        "layout": "fit"
+    },
+    "designerId": "9881e439-cf12-42ea-b456-bbb93d8c19c7",
+    "cn": [
+        {
+            "type": "Ext.Component",
+            "reference": {
+                "name": "items",
+                "type": "array"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "id": "id_t"
+            },
+            "designerId": "84e8e3b6-e9d3-419f-953b-02d1b6739775"
+        }
+    ]
+}

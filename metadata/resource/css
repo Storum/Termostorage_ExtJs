@@ -1,0 +1,14 @@
+{
+    "type": "cssresource",
+    "reference": {
+        "name": "items",
+        "type": "array"
+    },
+    "codeClass": null,
+    "userConfig": {
+        "designer|userClassName": "css",
+        "update": "delta",
+        "url": "resources/button_icons.css"
+    },
+    "designerId": "e99560c6-31e3-47b9-9346-1882df64498f"
+}

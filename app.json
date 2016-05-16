@@ -1,0 +1,8 @@
+{
+   "name": "Termo",
+   "requires": [],
+   "id": "f4de3784-f654-402f-bb7f-f8c90d7813b1",
+   "resources": [
+      "resources/button_icons.css"
+   ]
+}

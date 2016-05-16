@@ -1,0 +1,363 @@
+{
+    "type": "Ext.app.Controller",
+    "reference": {
+        "name": "items",
+        "type": "array"
+    },
+    "codeClass": null,
+    "userConfig": {
+        "designer|userClassName": "MainView_Controller",
+        "id": "id_main_view_cntr",
+        "requires": [
+            "Ext.data.JsonP",
+            "Ext.window.MessageBox"
+        ],
+        "views": [
+            "MainView"
+        ]
+    },
+    "designerId": "fe47c19a-1766-4668-a012-93e120da7a25",
+    "cn": [
+        {
+            "type": "controlleraction",
+            "reference": {
+                "name": "listeners",
+                "type": "array"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "designer|controlQuery": "#id_tv_stories",
+                "designer|targetType": "Ext.tree.View",
+                "fn": "onViewItemClick",
+                "implHandler": [
+                    "",
+                    "",
+                    "",
+                    "",
+                    "if (record.get('TermoMin') === \"\")",
+                    "{",
+                    "    Termo.Utilities.set_title_no_params();",
+                    "    Termo.Utilities.clear_all_chart_stories();",
+                    "    Termo.Utilities.disable_buttons(true);",
+                    "    Termo.Utilities.set_axis_title (true);",
+                    "    ",
+                    "    return;",
+                    "}",
+                    "else",
+                    "    Termo.Utilities.disable_buttons(false);",
+                    "",
+                    "",
+                    "GlobalVars.current_termo_min = record.get('TermoMin');",
+                    "GlobalVars.current_termo_max = record.get('TermoMax');",
+                    "GlobalVars.current_humid_min = record.get('HumidMin');",
+                    "GlobalVars.current_humid_max = record.get('HumidMax');",
+                    "",
+                    "GlobalVars.current_unit_id = record.get('unit_id');",
+                    "",
+                    "",
+                    "if (GlobalVars.current_period_type == 4 /*&& Termo.Utilities.isValidDate(GlobalVars.current_start_date) && Termo.Utilities.isValidDate(GlobalVars.current_finish_date)*/)",
+                    "    Termo.Utilities.exec_report_tracing (GlobalVars.current_unit_id, GlobalVars.current_period_type);",
+                    "else if (GlobalVars.current_period_type !== 4)",
+                    "    Termo.Utilities.exec_report_tracing (GlobalVars.current_unit_id, GlobalVars.current_period_type);",
+                    "",
+                    "Termo.Utilities.runner_stop();",
+                    "Termo.Utilities.task_chart_reload ();",
+                    "",
+                    "Termo.Utilities.set_title_params (GlobalVars.current_humid_max, GlobalVars.current_humid_min, GlobalVars.current_termo_max, GlobalVars.current_termo_min);",
+                    ""
+                ],
+                "name": "itemclick",
+                "scope": "me"
+            },
+            "designerId": "26fd87cf-a99c-4e87-9630-b4d762a6e873"
+        },
+        {
+            "type": "controlleraction",
+            "reference": {
+                "name": "listeners",
+                "type": "array"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "designer|controlQuery": "#id_radio_grp_period",
+                "designer|targetType": "Ext.form.RadioGroup",
+                "fn": "onRadiogroupChange",
+                "implHandler": [
+                    "",
+                    "",
+                    "GlobalVars.current_period_type = parseInt(newValue.x, 10);",
+                    "",
+                    "",
+                    "var period_panel = Ext.getCmp('id_period_panel');",
+                    "",
+                    "",
+                    "if (newValue.x == 4)",
+                    "{",
+                    "",
+                    "    period_panel.setDisabled(false);",
+                    "    var start_datefield = Ext.getCmp('id_datefield_start');",
+                    "    var finish_datefield = Ext.getCmp('id_datefield_finish');",
+                    "    start_datefield.reset();",
+                    "    finish_datefield.reset();",
+                    "",
+                    "",
+                    "    //if (GlobalVars.current_unit_id && Termo.Utilities.isValidDate(GlobalVars.current_start_date) && Termo.Utilities.isValidDate(GlobalVars.current_finish_date))",
+                    "    //    Termo.Utilities.exec_report_tracing (GlobalVars.current_unit_id, GlobalVars.current_period_type);",
+                    "    //else",
+                    "    //{",
+                    "    //    Termo.Utilities.clear_all_chart_stories();",
+                    "   // }",
+                    "}",
+                    "else",
+                    "{",
+                    "    period_panel.setDisabled(true);",
+                    "    if (GlobalVars.current_unit_id)",
+                    "        Termo.Utilities.exec_report_tracing (GlobalVars.current_unit_id, GlobalVars.current_period_type);",
+                    "   // else",
+                    "   //     Termo.Utilities.clear_all_chart_stories();",
+                    "}"
+                ],
+                "name": "change",
+                "scope": "me"
+            },
+            "designerId": "83adfa6d-3f8c-4e1e-9518-38b971df30a2"
+        },
+        {
+            "type": "controlleraction",
+            "reference": {
+                "name": "listeners",
+                "type": "array"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "designer|controlQuery": "#id_datefield_start",
+                "designer|targetType": "Ext.form.field.Date",
+                "fn": "onDatefieldChange_start",
+                "implHandler": [
+                    "",
+                    "",
+                    "var d = new Date();",
+                    "var time_offset = d.getTimezoneOffset()/60;",
+                    "",
+                    "",
+                    "var finish_datefield_value = Ext.getCmp('id_datefield_finish').getValue();",
+                    "",
+                    "if (!Termo.Utilities.isValidDate(newValue))",
+                    "    return;",
+                    "",
+                    "",
+                    "",
+                    "if (GlobalVars.current_finish_date)",
+                    "{",
+                    "    ",
+                    "    var finish_date = new Date(GlobalVars.current_finish_date*1000);",
+                    "    ",
+                    "    if (newValue.getTime() > finish_date.getTime())",
+                    "    {",
+                    "        Ext.MessageBox.alert('Ошибка ввода', 'Дата окончания позже даты начала');",
+                    "        Termo.Utilities.clear_all_chart_stories();",
+                    "",
+                    "",
+                    "        var start_datefield = Ext.getCmp('id_datefield_start');",
+                    "        var finish_datefield = Ext.getCmp('id_datefield_finish');",
+                    "        start_datefield.reset();",
+                    "        finish_datefield.reset();",
+                    "",
+                    "//        GlobalVars.current_finish_date = null;",
+                    "//        GlobalVars.current_start_date = null;",
+                    "    }",
+                    "    else",
+                    "    {",
+                    "        ",
+                    "        GlobalVars.current_start_date = Math.floor(newValue / 1000) + time_offset;",
+                    "        ",
+                    "        ",
+                    "        ",
+                    "        ",
+                    "        if (GlobalVars.current_unit_id && finish_datefield_value)",
+                    "            Termo.Utilities.exec_report_tracing (GlobalVars.current_unit_id, GlobalVars.current_period_type);",
+                    "",
+                    "    }",
+                    "}",
+                    "else",
+                    "{",
+                    "",
+                    "",
+                    "        ",
+                    "    GlobalVars.current_start_date = Math.floor(newValue / 1000) + time_offset;",
+                    "    ",
+                    "    if (GlobalVars.current_unit_id && finish_datefield_value)",
+                    "    {",
+                    "        console.log('start_');",
+                    "        Termo.Utilities.exec_report_tracing (GlobalVars.current_unit_id, GlobalVars.current_period_type);",
+                    "    }",
+                    "            ",
+                    "    ",
+                    "}",
+                    "    ",
+                    ""
+                ],
+                "name": "change",
+                "scope": "me"
+            },
+            "designerId": "dddd11b9-198e-4bbd-8eae-cae8047808ee"
+        },
+        {
+            "type": "controlleraction",
+            "reference": {
+                "name": "listeners",
+                "type": "array"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "designer|controlQuery": "#id_datefield_finish",
+                "designer|targetType": "Ext.form.field.Date",
+                "fn": "onDatefieldChange_finish",
+                "implHandler": [
+                    "var d = new Date();",
+                    "var time_offset = d.getTimezoneOffset()/60;",
+                    "",
+                    "var start_datefield_value = Ext.getCmp('id_datefield_start').getValue();",
+                    "",
+                    "",
+                    "",
+                    "if (!Termo.Utilities.isValidDate(newValue))",
+                    "    return;",
+                    "",
+                    "",
+                    "",
+                    "if (GlobalVars.current_start_date)",
+                    "{",
+                    "    var start_date = new Date(GlobalVars.current_start_date*1000);",
+                    "    ",
+                    "    if (newValue.getTime() < start_date.getTime())",
+                    "    {",
+                    "        Ext.MessageBox.alert('Ошибка ввода', 'Дата окончания позже даты начала');",
+                    "        Termo.Utilities.clear_all_chart_stories();",
+                    "",
+                    "",
+                    "        var finish_datefield = Ext.getCmp('id_datefield_finish');",
+                    "        finish_datefield.reset();",
+                    "    }",
+                    "    else",
+                    "    {",
+                    "        GlobalVars.current_finish_date  = Math.floor(newValue / 1000) + time_offset;",
+                    "        ",
+                    "        if (GlobalVars.current_unit_id && start_datefield_value)",
+                    "            Termo.Utilities.exec_report_tracing (GlobalVars.current_unit_id, GlobalVars.current_period_type);",
+                    "    }",
+                    "}",
+                    "else",
+                    "{",
+                    "    GlobalVars.current_finish_date = Math.floor(newValue / 1000) + time_offset;",
+                    "",
+                    "    if (GlobalVars.current_unit_id && start_datefield_value)",
+                    "            Termo.Utilities.exec_report_tracing (GlobalVars.current_unit_id, GlobalVars.current_period_type);",
+                    "}",
+                    "    "
+                ],
+                "name": "change",
+                "scope": "me"
+            },
+            "designerId": "34cbec35-089d-4036-b2f7-387a19fdce57"
+        },
+        {
+            "type": "controlleraction",
+            "reference": {
+                "name": "listeners",
+                "type": "array"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "designer|controlQuery": "#id_export_ex_temp_btn",
+                "designer|targetType": "Ext.button.Button",
+                "fn": "onButtonClick_export_to_excel_temp",
+                "implHandler": [
+                    "Termo.Utilities.export_to_excel(2);"
+                ],
+                "name": "click",
+                "scope": "me"
+            },
+            "designerId": "1bc7b197-c350-406a-a545-b550921b7f54"
+        },
+        {
+            "type": "controlleraction",
+            "reference": {
+                "name": "listeners",
+                "type": "array"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "designer|controlQuery": "#id_export_ex_humid_btn",
+                "designer|targetType": "Ext.button.Button",
+                "fn": "onButtonClick_export_to_excel_humid",
+                "implHandler": [
+                    "Termo.Utilities.export_to_excel(1);"
+                ],
+                "name": "click",
+                "scope": "me"
+            },
+            "designerId": "26722ebe-70e2-45a1-a061-4aa84135db44"
+        },
+        {
+            "type": "controlleraction",
+            "reference": {
+                "name": "listeners",
+                "type": "array"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "designer|controlQuery": "#id_exit_btn",
+                "designer|targetType": "Ext.button.Button",
+                "fn": "onButtonClick_exit",
+                "implHandler": [
+                    "//window.open(GlobalVars.url_setting, '_blank');",
+                    "window.location = GlobalVars.url_setting;",
+                    "",
+                    ""
+                ],
+                "name": "click",
+                "scope": "me"
+            },
+            "designerId": "71a5152a-0b07-435c-8d3f-5f231072c872"
+        },
+        {
+            "type": "controlleraction",
+            "reference": {
+                "name": "listeners",
+                "type": "array"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "designer|controlQuery": "#id_export_png_temp_btn",
+                "designer|targetType": "Ext.button.Button",
+                "fn": "onButtonClick_save_term_png",
+                "implHandler": [
+                    "Termo.Utilities.save_temperature_chart();"
+                ],
+                "name": "click",
+                "scope": "me"
+            },
+            "designerId": "7fe75bf0-8d05-4544-8df1-bca0adce7b0d"
+        },
+        {
+            "type": "controlleraction",
+            "reference": {
+                "name": "listeners",
+                "type": "array"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "designer|controlQuery": "#id_export_png_humid_btn",
+                "designer|targetType": "Ext.button.Button",
+                "fn": "onButtonClick_save_humid_png",
+                "implHandler": [
+                    "Termo.Utilities.save_humid_chart();"
+                ],
+                "name": "click",
+                "scope": "me"
+            },
+            "designerId": "5cb20673-8a9e-492c-930c-25964c4b11c9"
+        }
+    ]
+}

@@ -1,0 +1,105 @@
+{
+    "type": "Ext.data.Model",
+    "reference": {
+        "name": "items",
+        "type": "array"
+    },
+    "codeClass": null,
+    "userConfig": {
+        "designer|userClassName": "model_humid"
+    },
+    "designerId": "3d902d65-4db4-4836-8286-76afaca4b835",
+    "cn": [
+        {
+            "type": "Ext.data.Field",
+            "reference": {
+                "name": "fields",
+                "type": "array"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "dateFormat": null,
+                "name": "date",
+                "type": "string",
+                "useNull": true
+            },
+            "designerId": "8131435e-391a-4eda-87bf-0b407385d0c9",
+            "customConfigs": [
+                {
+                    "group": "(Custom Properties)",
+                    "name": "fi",
+                    "type": "string"
+                }
+            ]
+        },
+        {
+            "type": "Ext.data.Field",
+            "reference": {
+                "name": "fields",
+                "type": "array"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "name": "humid_min",
+                "type": "float",
+                "useNull": true
+            },
+            "designerId": "f515e835-cb6d-4f85-89f2-b8c22877f005"
+        },
+        {
+            "type": "Ext.data.Field",
+            "reference": {
+                "name": "fields",
+                "type": "array"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "name": "humid_max",
+                "type": "float",
+                "useNull": true
+            },
+            "designerId": "28d29b1a-adc7-428d-ac15-fc6d783ed916"
+        },
+        {
+            "type": "Ext.data.Field",
+            "reference": {
+                "name": "fields",
+                "type": "array"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "name": "humid_data",
+                "type": "float",
+                "useNull": true
+            },
+            "designerId": "9fcc0045-8833-4da6-9a78-f4b8585d3abc"
+        },
+        {
+            "type": "Ext.data.Field",
+            "reference": {
+                "name": "fields",
+                "type": "array"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "name": "temperature_data",
+                "type": "float",
+                "useNull": true
+            },
+            "designerId": "dece11a9-b8e3-4e19-a965-72b98fa8c9da"
+        },
+        {
+            "type": "Ext.data.Field",
+            "reference": {
+                "name": "fields",
+                "type": "array"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "name": "x",
+                "type": "float"
+            },
+            "designerId": "1a673a57-1e3a-4a3a-8e12-bbce8964801f"
+        }
+    ]
+}

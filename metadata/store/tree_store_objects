@@ -1,0 +1,37 @@
+{
+    "type": "Ext.data.TreeStore",
+    "reference": {
+        "name": "items",
+        "type": "array"
+    },
+    "codeClass": null,
+    "userConfig": {
+        "designer|userClassName": "tree_store_objects",
+        "model": "tree_model_objects",
+        "root": null,
+        "storeId": "tree_store_objects"
+    },
+    "designerId": "83a710a7-107d-4bd0-ba97-52268e13df8f",
+    "cn": [
+        {
+            "type": "Ext.data.proxy.Memory",
+            "reference": {
+                "name": "proxy",
+                "type": "object"
+            },
+            "codeClass": null,
+            "designerId": "b0d7862c-228d-4c74-be1a-559e1a5e4bfe",
+            "cn": [
+                {
+                    "type": "Ext.data.reader.Json",
+                    "reference": {
+                        "name": "reader",
+                        "type": "object"
+                    },
+                    "codeClass": null,
+                    "designerId": "6bbf71dd-720c-405b-aac3-22745fc9bb63"
+                }
+            ]
+        }
+    ]
+}

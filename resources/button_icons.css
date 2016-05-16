@@ -1,0 +1,22 @@
+.excel {
+    background-image: url(img/Excel.png) !important;
+}
+
+.png {
+    background-image: url(img/Png.png) !important;
+}
+
+
+.exit {
+    background-image: url(img/Exit.png) !important;
+}
+
+.align-top { vertical-align:center; text-align: center; background: lightgray; font-size: 14px; color:red;}
+
+.align-center {text-align: center; background: lightgray; font-size: 14px;}
+
+.failedwms-icon {
+    height: 32px;
+    width: 32px;
+    background-repeat: no-repeat;
+}

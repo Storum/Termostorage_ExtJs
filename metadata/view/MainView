@@ -1,0 +1,1079 @@
+{
+    "type": "Ext.container.Viewport",
+    "reference": {
+        "name": "items",
+        "type": "array"
+    },
+    "codeClass": null,
+    "userConfig": {
+        "container|align": "stretch",
+        "designer|userClassName": "MainView",
+        "id": "id_main_view",
+        "itemId": "mainView",
+        "layout": "hbox",
+        "requires": [
+            "Ext.chart.Chart"
+        ]
+    },
+    "designerId": "51664173-3dd3-4c65-bc8c-fcec064068ab",
+    "cn": [
+        {
+            "type": "Ext.tree.Panel",
+            "reference": {
+                "name": "items",
+                "type": "array"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "id": "id_tr_panel_stories",
+                "layout|flex": 1,
+                "store": "tree_store_objects",
+                "title": "Склады",
+                "width": null
+            },
+            "designerId": "8acadca2-b6d7-43d0-8829-9a37eaf91a4a",
+            "cn": [
+                {
+                    "type": "Ext.tree.View",
+                    "reference": {
+                        "name": "viewConfig",
+                        "type": "object"
+                    },
+                    "codeClass": null,
+                    "userConfig": {
+                        "id": "id_tv_stories",
+                        "loadingText": "Загрузка..."
+                    },
+                    "designerId": "97e4f145-332b-45ea-a23e-e9d05e716999"
+                }
+            ]
+        },
+        {
+            "type": "Ext.panel.Panel",
+            "reference": {
+                "name": "items",
+                "type": "array"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "container|align": "stretch",
+                "id": "id_panel_charts",
+                "layout": "vbox",
+                "layout|flex": 3,
+                "title": null,
+                "width": null
+            },
+            "designerId": "be8aa82f-1589-4673-aad7-48b012078852",
+            "cn": [
+                {
+                    "type": "Ext.panel.Panel",
+                    "reference": {
+                        "name": "dockedItems",
+                        "type": "array"
+                    },
+                    "codeClass": null,
+                    "userConfig": {
+                        "container|align": "stretch",
+                        "dock": "top",
+                        "height": 44,
+                        "id": "id_panel_buttons",
+                        "layout": "hbox",
+                        "layout|flex": 1,
+                        "title": ""
+                    },
+                    "designerId": "fb46cdd4-9bcb-4895-9dfd-eb97e03e670d",
+                    "cn": [
+                        {
+                            "type": "Ext.form.RadioGroup",
+                            "reference": {
+                                "name": "dockedItems",
+                                "type": "array"
+                            },
+                            "codeClass": null,
+                            "userConfig": {
+                                "dock": "left",
+                                "fieldLabel": "",
+                                "height": 33,
+                                "id": "id_radio_grp_period",
+                                "width": 349
+                            },
+                            "designerId": "c1bb01a7-e79a-46e9-8727-45489c156176",
+                            "cn": [
+                                {
+                                    "type": "Ext.form.field.Radio",
+                                    "reference": {
+                                        "name": "items",
+                                        "type": "array"
+                                    },
+                                    "codeClass": null,
+                                    "userConfig": {
+                                        "boxLabel": "1 День",
+                                        "checked": true,
+                                        "fieldLabel": null,
+                                        "id": "id_day_check",
+                                        "inputValue": "1",
+                                        "name": "x"
+                                    },
+                                    "designerId": "4b71f6d7-828b-4f57-9977-dafba66791e1"
+                                },
+                                {
+                                    "type": "Ext.form.field.Radio",
+                                    "reference": {
+                                        "name": "items",
+                                        "type": "array"
+                                    },
+                                    "codeClass": null,
+                                    "userConfig": {
+                                        "boxLabel": "2 Дня",
+                                        "fieldLabel": null,
+                                        "id": "id_week_check",
+                                        "inputValue": "2",
+                                        "name": "x"
+                                    },
+                                    "designerId": "d92517fe-6044-4f99-bb71-112400dd613c"
+                                },
+                                {
+                                    "type": "Ext.form.field.Radio",
+                                    "reference": {
+                                        "name": "items",
+                                        "type": "array"
+                                    },
+                                    "codeClass": null,
+                                    "userConfig": {
+                                        "boxLabel": "3 Дня",
+                                        "fieldLabel": "",
+                                        "id": "id_month_check",
+                                        "inputValue": "3",
+                                        "name": "x"
+                                    },
+                                    "designerId": "86555f8c-9227-4709-8072-cffa9909464d"
+                                },
+                                {
+                                    "type": "Ext.form.field.Radio",
+                                    "reference": {
+                                        "name": "items",
+                                        "type": "array"
+                                    },
+                                    "codeClass": null,
+                                    "userConfig": {
+                                        "boxLabel": "Период:",
+                                        "fieldLabel": "",
+                                        "id": "id_custome_check",
+                                        "inputValue": "4",
+                                        "name": "x"
+                                    },
+                                    "designerId": "d382c5c2-e1df-4836-a6c4-88b426ed949d"
+                                }
+                            ]
+                        },
+                        {
+                            "type": "Ext.panel.Panel",
+                            "reference": {
+                                "name": "dockedItems",
+                                "type": "array"
+                            },
+                            "codeClass": null,
+                            "userConfig": {
+                                "container|align": "stretch",
+                                "disabled": true,
+                                "dock": "left",
+                                "height": 89,
+                                "id": "id_period_panel",
+                                "layout": "hbox",
+                                "title": null,
+                                "width": 264
+                            },
+                            "designerId": "31646b0d-f81c-41b0-bf98-aae68b17aaf1",
+                            "cn": [
+                                {
+                                    "type": "Ext.form.field.Date",
+                                    "reference": {
+                                        "name": "dockedItems",
+                                        "type": "array"
+                                    },
+                                    "codeClass": null,
+                                    "userConfig": {
+                                        "dock": "top",
+                                        "fieldLabel": "Начало:",
+                                        "format": "d.m.Y H:i:s",
+                                        "id": "id_datefield_start",
+                                        "invalidText": "Неверное значение",
+                                        "labelWidth": 50
+                                    },
+                                    "designerId": "fdc953dd-c1d5-4099-b8d3-2ef6fe902488"
+                                },
+                                {
+                                    "type": "Ext.form.field.Date",
+                                    "reference": {
+                                        "name": "dockedItems",
+                                        "type": "array"
+                                    },
+                                    "codeClass": null,
+                                    "userConfig": {
+                                        "dock": "top",
+                                        "fieldLabel": "Конец:",
+                                        "format": "d.m.Y H:i:s",
+                                        "id": "id_datefield_finish",
+                                        "invalidText": "Неверное значение",
+                                        "labelWidth": 50
+                                    },
+                                    "designerId": "243d84a0-5cfa-46a1-963f-c9b8b60f648e"
+                                }
+                            ]
+                        },
+                        {
+                            "type": "Ext.form.field.Display",
+                            "reference": {
+                                "name": "items",
+                                "type": "array"
+                            },
+                            "codeClass": null,
+                            "userConfig": {
+                                "fieldBodyCls": "align-top",
+                                "fieldCls": "align-top",
+                                "fieldLabel": "",
+                                "fieldStyle": null,
+                                "hideLabel": true,
+                                "id": "id_user_lbl",
+                                "layout|flex": 1
+                            },
+                            "designerId": "e9fa93bb-b06f-4c5c-bc91-44328d73e628"
+                        },
+                        {
+                            "type": "Ext.button.Button",
+                            "reference": {
+                                "name": "dockedItems",
+                                "type": "array"
+                            },
+                            "codeClass": null,
+                            "userConfig": {
+                                "dock": "right",
+                                "icon": "resources//img//Exit.png",
+                                "iconCls": null,
+                                "id": "id_exit_btn",
+                                "layout|flex": 1,
+                                "scale": "large",
+                                "text": "Выйти",
+                                "width": 77
+                            },
+                            "designerId": "df2f2e4b-38c7-448d-a67c-1c7c0ed5781f"
+                        }
+                    ]
+                },
+                {
+                    "type": "Ext.panel.Panel",
+                    "reference": {
+                        "name": "items",
+                        "type": "array"
+                    },
+                    "codeClass": null,
+                    "userConfig": {
+                        "autoScroll": true,
+                        "id": "id_panel_termo",
+                        "layout": "fit",
+                        "layout|flex": 1,
+                        "title": "Температура",
+                        "titleAlign": "right"
+                    },
+                    "designerId": "96acdebc-7384-47b4-8b13-0a3b682804db",
+                    "cn": [
+                        {
+                            "type": "Ext.panel.Panel",
+                            "reference": {
+                                "name": "dockedItems",
+                                "type": "array"
+                            },
+                            "codeClass": null,
+                            "userConfig": {
+                                "dock": "top",
+                                "layout": "column",
+                                "title": null
+                            },
+                            "designerId": "e94a26a4-833a-474f-940d-9a34ccbda35b",
+                            "cn": [
+                                {
+                                    "type": "Ext.button.Button",
+                                    "reference": {
+                                        "name": "items",
+                                        "type": "array"
+                                    },
+                                    "codeClass": null,
+                                    "userConfig": {
+                                        "disabled": true,
+                                        "dock": null,
+                                        "height": 30,
+                                        "icon": "resources//img//Png.png",
+                                        "iconCls": null,
+                                        "id": "id_export_png_temp_btn",
+                                        "scale": "medium",
+                                        "text": "PNG",
+                                        "width": 65
+                                    },
+                                    "designerId": "f044e645-ae61-461d-9f0f-426a6a04d896"
+                                },
+                                {
+                                    "type": "Ext.button.Button",
+                                    "reference": {
+                                        "name": "items",
+                                        "type": "array"
+                                    },
+                                    "codeClass": null,
+                                    "userConfig": {
+                                        "disabled": true,
+                                        "dock": null,
+                                        "height": 30,
+                                        "icon": "resources//img//Excel.png",
+                                        "iconCls": null,
+                                        "id": "id_export_ex_temp_btn",
+                                        "scale": "medium",
+                                        "text": "Excel",
+                                        "textAlign": null,
+                                        "width": 65
+                                    },
+                                    "designerId": "4a2bd644-dde5-4326-a8c0-6bd7b8e39539"
+                                },
+                                {
+                                    "type": "Ext.form.field.Display",
+                                    "reference": {
+                                        "name": "dockedItems",
+                                        "type": "array"
+                                    },
+                                    "codeClass": null,
+                                    "userConfig": {
+                                        "dock": "left",
+                                        "fieldBodyCls": "align-center ",
+                                        "fieldCls": "align-center ",
+                                        "fieldLabel": "",
+                                        "fieldStyle": null,
+                                        "hideLabel": true,
+                                        "id": "id_user_lbl_1"
+                                    },
+                                    "designerId": "ee624d33-08b1-4d42-ae3a-12b440a1ff47"
+                                }
+                            ]
+                        },
+                        {
+                            "type": "Ext.chart.Chart",
+                            "reference": {
+                                "name": "items",
+                                "type": "array"
+                            },
+                            "codeClass": null,
+                            "userConfig": {
+                                "animate": [
+                                    "true"
+                                ],
+                                "background": [
+                                    "{",
+                                    "    ",
+                                    "    fill: '#F6F6F3'",
+                                    "}"
+                                ],
+                                "height": 250,
+                                "id": "id_temperature_chart",
+                                "insetPadding": 20,
+                                "store": "store_temperature",
+                                "theme": null,
+                                "width": 400
+                            },
+                            "designerId": "a75098ec-5a61-4256-b8d0-15b0fdff6b1b",
+                            "isBuiltIn": true,
+                            "iconCls": "icon-line-chart",
+                            "autoName": "LineChart",
+                            "cn": [
+                                {
+                                    "type": "Ext.chart.axis.Numeric",
+                                    "reference": {
+                                        "name": "axes",
+                                        "type": "array"
+                                    },
+                                    "codeClass": null,
+                                    "userConfig": {
+                                        "adjustMaximumByMajorUnit": true,
+                                        "adjustMinimumByMajorUnit": true,
+                                        "dashSize": null,
+                                        "fields": [
+                                            "temperature_data",
+                                            "temperature_min",
+                                            "temperature_max"
+                                        ],
+                                        "maximum": null,
+                                        "minimum": null,
+                                        "title": "Температура"
+                                    },
+                                    "designerId": "648f72ac-e234-42f2-9789-ab8345c01fb1"
+                                },
+                                {
+                                    "type": "Ext.chart.axis.Numeric",
+                                    "reference": {
+                                        "name": "axes",
+                                        "type": "array"
+                                    },
+                                    "codeClass": null,
+                                    "userConfig": {
+                                        "adjustMaximumByMajorUnit": true,
+                                        "adjustMinimumByMajorUnit": true,
+                                        "dashSize": null,
+                                        "fields": [
+                                            "temperature_data"
+                                        ],
+                                        "hidden": true,
+                                        "maximum": null,
+                                        "minimum": 0,
+                                        "position": "right",
+                                        "title": "Температура_h"
+                                    },
+                                    "designerId": "8af6fb2a-cf85-491b-b33d-3d0c4961c0a0"
+                                },
+                                {
+                                    "type": "Ext.chart.axis.Category",
+                                    "reference": {
+                                        "name": "axes",
+                                        "type": "array"
+                                    },
+                                    "codeClass": null,
+                                    "userConfig": {
+                                        "dateFormat": null,
+                                        "fields": [
+                                            "date"
+                                        ],
+                                        "label": [
+                                            "{",
+                                            "    renderer:function(v)",
+                                            "    {",
+                                            "        if (v)",
+                                            "        {",
+                                            "            var date_obj = new Date();",
+                                            "            date_obj.setTime (Date.parse(v));",
+                                            "            ",
+                                            "            ",
+                                            "            return date_obj.toLocaleFormat('%H:%M');",
+                                            "        }",
+                                            "        else",
+                                            "            return \"\";",
+                                            "        ",
+                                            "    },",
+                                            "    rotation:{degrees:-45}",
+                                            "    ",
+                                            "}"
+                                        ],
+                                        "length": null,
+                                        "title": "Время",
+                                        "width": null
+                                    },
+                                    "designerId": "b26710a6-7c2e-4525-a5b3-5607e5ca8128",
+                                    "customConfigs": [
+                                        {
+                                            "group": "(Custom Properties)",
+                                            "name": "dateFormat",
+                                            "type": "string"
+                                        }
+                                    ]
+                                },
+                                {
+                                    "type": "Ext.chart.series.Line",
+                                    "reference": {
+                                        "name": "series",
+                                        "type": "array"
+                                    },
+                                    "codeClass": null,
+                                    "userConfig": {
+                                        "axis": [
+                                            "left"
+                                        ],
+                                        "showMarkers": false,
+                                        "smooth": 3,
+                                        "style": [
+                                            "{",
+                                            "    stroke: '#F02431',",
+                                            "    'stroke-width': 1,",
+                                            "    fill: '#F02431'",
+                                            "}"
+                                        ],
+                                        "title": [
+                                            "max_temperature"
+                                        ],
+                                        "xField": "date",
+                                        "yField": [
+                                            "temperature_max"
+                                        ]
+                                    },
+                                    "designerId": "aa21c105-f4e2-4dcb-a71f-3c91b5a59aef"
+                                },
+                                {
+                                    "type": "Ext.chart.series.Line",
+                                    "reference": {
+                                        "name": "series",
+                                        "type": "array"
+                                    },
+                                    "codeClass": null,
+                                    "userConfig": {
+                                        "axis": [
+                                            "left"
+                                        ],
+                                        "showMarkers": false,
+                                        "smooth": 3,
+                                        "style": [
+                                            "{",
+                                            "    stroke: '#F02431',",
+                                            "    'stroke-width': 1,",
+                                            "    fill: '#F02431'",
+                                            "}"
+                                        ],
+                                        "title": [
+                                            "min_temperature"
+                                        ],
+                                        "xField": "date",
+                                        "yField": [
+                                            "temperature_min"
+                                        ]
+                                    },
+                                    "designerId": "62ff1614-1995-400f-a8bb-fe17ebd9209c"
+                                },
+                                {
+                                    "type": "Ext.chart.series.Area",
+                                    "reference": {
+                                        "name": "series",
+                                        "type": "array"
+                                    },
+                                    "codeClass": null,
+                                    "userConfig": {
+                                        "axis": [
+                                            "right"
+                                        ],
+                                        "highlight": [
+                                            "{",
+                                            "    fill: 'red',",
+                                            "    'stroke-width': 2,",
+                                            "    stroke: 'red'",
+                                            "}"
+                                        ],
+                                        "style": [
+                                            "{",
+                                            "    fill: \"#1DED49\",",
+                                            "    stroke: \"#1DED49\",",
+                                            "    'stroke-width': 3,",
+                                            "    opacity: 0.0",
+                                            "}"
+                                        ],
+                                        "tips": [
+                                            "{",
+                                            "    trackMouse:true,",
+                                            "    width: 160,",
+                                            "    height: 70,",
+                                            " ",
+                                            "    renderer:function(storeItem, item)",
+                                            "    {",
+                                            "       ",
+                                            "        ",
+                                            "        var date_obj = new Date();",
+                                            "        date_obj.setTime (Date.parse(storeItem.get('date')));",
+                                            "                                                    ",
+                                            "        //console.log(storeItem.get('date'));",
+                                            "        ",
+                                            "        this.setTitle('<br> Температура: ' + storeItem.get('temperature_data') + '°<br />' + 'Влажность: ' + storeItem.get('humid_data') + '<br />' +  date_obj.toLocaleFormat('%d.%m.%y %H:%M:%S'));",
+                                            "    }",
+                                            "}"
+                                        ],
+                                        "xField": "date",
+                                        "yField": [
+                                            "x"
+                                        ]
+                                    },
+                                    "designerId": "f2f4dc82-af36-4ad7-9b28-27af6b4cf594"
+                                },
+                                {
+                                    "type": "Ext.chart.series.Line",
+                                    "reference": {
+                                        "name": "series",
+                                        "type": "array"
+                                    },
+                                    "codeClass": null,
+                                    "userConfig": {
+                                        "axis": [
+                                            "left"
+                                        ],
+                                        "highlight": null,
+                                        "markerConfig": [
+                                            "{",
+                                            "    type: 'circle'",
+                                            "}"
+                                        ],
+                                        "smooth": 10,
+                                        "style": [
+                                            "{",
+                                            "//    fill: \"#1DED49\",",
+                                            "//    stroke: \"#1DED49\",",
+                                            "    ",
+                                            "    fill: \"#C1C1BF\",",
+                                            "    stroke: \"#C1C1BF\",",
+                                            "",
+                                            "    ",
+                                            " ",
+                                            "    'stroke-width': 3,",
+                                            "    opacity: 0.8",
+                                            "}"
+                                        ],
+                                        "tips": null,
+                                        "title": [
+                                            "Temperature"
+                                        ],
+                                        "xField": "date",
+                                        "yField": [
+                                            "temperature_data"
+                                        ]
+                                    },
+                                    "designerId": "5ee6b3e7-2149-4a88-aefb-3b36691ae0b3",
+                                    "cn": [
+                                        {
+                                            "type": "fixedfunction",
+                                            "reference": {
+                                                "name": "items",
+                                                "type": "array"
+                                            },
+                                            "codeClass": null,
+                                            "userConfig": {
+                                                "designer|params": [
+                                                    "sprite",
+                                                    "record",
+                                                    "attributes",
+                                                    "index",
+                                                    "store"
+                                                ],
+                                                "fn": "renderer",
+                                                "implHandler": [
+                                                    "var r = store.getAt(index);",
+                                                    "",
+                                                    "if (r)",
+                                                    "{",
+                                                    "",
+                                                    "    var max_temperature = r.get('temperature_max');",
+                                                    "    var min_temperature = r.get('temperature_min');",
+                                                    "    var temperature = r.get('temperature_data');",
+                                                    "",
+                                                    "    if (max_temperature < temperature || min_temperature > temperature)",
+                                                    "        attributes.fill = '#A90F0F';",
+                                                    " //       attributes.fill = '#1DED49';",
+                                                    "}",
+                                                    "",
+                                                    "",
+                                                    "",
+                                                    "return attributes;"
+                                                ]
+                                            },
+                                            "designerId": "87bd1daa-f066-47e0-9c19-56225d0a6514"
+                                        }
+                                    ]
+                                }
+                            ]
+                        }
+                    ]
+                },
+                {
+                    "type": "Ext.panel.Panel",
+                    "reference": {
+                        "name": "items",
+                        "type": "array"
+                    },
+                    "codeClass": null,
+                    "userConfig": {
+                        "id": "id_panel_moisture",
+                        "layout": "fit",
+                        "layout|flex": 1,
+                        "title": "Относительная влажность",
+                        "titleAlign": "right"
+                    },
+                    "designerId": "2666fdbb-911d-42fe-a9e6-7c993d16b18b",
+                    "cn": [
+                        {
+                            "type": "Ext.panel.Panel",
+                            "reference": {
+                                "name": "dockedItems",
+                                "type": "array"
+                            },
+                            "codeClass": null,
+                            "userConfig": {
+                                "dock": "top",
+                                "layout": "column",
+                                "title": null
+                            },
+                            "designerId": "c9914ea7-730d-4d0a-926c-a92b00d905cb",
+                            "cn": [
+                                {
+                                    "type": "Ext.button.Button",
+                                    "reference": {
+                                        "name": "items",
+                                        "type": "array"
+                                    },
+                                    "codeClass": null,
+                                    "userConfig": {
+                                        "disabled": true,
+                                        "height": 30,
+                                        "icon": "resources//img//Png.png",
+                                        "iconCls": null,
+                                        "id": "id_export_png_humid_btn",
+                                        "scale": "medium",
+                                        "text": "PNG",
+                                        "width": 65
+                                    },
+                                    "designerId": "1b204c62-3576-4977-a882-c3e88cd03dca"
+                                },
+                                {
+                                    "type": "Ext.button.Button",
+                                    "reference": {
+                                        "name": "items",
+                                        "type": "array"
+                                    },
+                                    "codeClass": null,
+                                    "userConfig": {
+                                        "disabled": true,
+                                        "dock": null,
+                                        "height": 30,
+                                        "icon": "resources//img//Excel.png",
+                                        "iconCls": null,
+                                        "id": "id_export_ex_humid_btn",
+                                        "scale": "medium",
+                                        "text": "Excel",
+                                        "width": 65
+                                    },
+                                    "designerId": "2b0a60d6-c50e-453b-95ab-6c586a55de22"
+                                },
+                                {
+                                    "type": "Ext.form.field.Display",
+                                    "reference": {
+                                        "name": "dockedItems",
+                                        "type": "array"
+                                    },
+                                    "codeClass": null,
+                                    "userConfig": {
+                                        "dock": "left",
+                                        "fieldBodyCls": "align-center ",
+                                        "fieldCls": "align-center ",
+                                        "fieldLabel": "",
+                                        "fieldStyle": null,
+                                        "hideLabel": true,
+                                        "id": "id_user_lbl_2"
+                                    },
+                                    "designerId": "8f0014b7-44da-4583-92b7-021fde153ed0"
+                                }
+                            ]
+                        },
+                        {
+                            "type": "Ext.chart.Chart",
+                            "reference": {
+                                "name": "items",
+                                "type": "array"
+                            },
+                            "codeClass": null,
+                            "userConfig": {
+                                "animate": [
+                                    "true"
+                                ],
+                                "background": [
+                                    "{",
+                                    "    ",
+                                    "    fill: '#F6F6F3'",
+                                    "}"
+                                ],
+                                "height": 250,
+                                "id": "id_humid_chart",
+                                "insetPadding": 20,
+                                "store": "store_humid",
+                                "width": 400
+                            },
+                            "designerId": "45cb4d3b-7ea2-4c08-927f-420cf369367b",
+                            "isBuiltIn": true,
+                            "iconCls": "icon-line-chart",
+                            "autoName": "LineChart",
+                            "cn": [
+                                {
+                                    "type": "Ext.chart.axis.Numeric",
+                                    "reference": {
+                                        "name": "axes",
+                                        "type": "array"
+                                    },
+                                    "codeClass": null,
+                                    "userConfig": {
+                                        "adjustMaximumByMajorUnit": true,
+                                        "adjustMinimumByMajorUnit": true,
+                                        "decimals": null,
+                                        "fields": [
+                                            "humid_data",
+                                            "humid_min",
+                                            "humid_max"
+                                        ],
+                                        "majorTickSteps": null,
+                                        "maximum": null,
+                                        "minimum": null,
+                                        "minorTickSteps": 1,
+                                        "title": "Влажность"
+                                    },
+                                    "designerId": "ca816496-2742-4446-9750-85b219d37e47"
+                                },
+                                {
+                                    "type": "Ext.chart.axis.Numeric",
+                                    "reference": {
+                                        "name": "axes",
+                                        "type": "array"
+                                    },
+                                    "codeClass": null,
+                                    "userConfig": {
+                                        "adjustMaximumByMajorUnit": true,
+                                        "adjustMinimumByMajorUnit": true,
+                                        "decimals": null,
+                                        "fields": [
+                                            "humid_data"
+                                        ],
+                                        "hidden": true,
+                                        "majorTickSteps": null,
+                                        "maximum": null,
+                                        "minimum": null,
+                                        "minorTickSteps": 1,
+                                        "position": "right",
+                                        "title": "Влажность_h"
+                                    },
+                                    "designerId": "8853e490-2faf-4c9d-a543-2479fa0e35fd"
+                                },
+                                {
+                                    "type": "Ext.chart.axis.Category",
+                                    "reference": {
+                                        "name": "axes",
+                                        "type": "array"
+                                    },
+                                    "codeClass": null,
+                                    "userConfig": {
+                                        "dateFormat": null,
+                                        "fields": [
+                                            "date"
+                                        ],
+                                        "label": [
+                                            "{",
+                                            "    renderer:function(v)",
+                                            "    {",
+                                            "        if (v)",
+                                            "        {",
+                                            "            var date_obj = new Date();",
+                                            "            date_obj.setTime (Date.parse(v));",
+                                            "            ",
+                                            "            ",
+                                            "            return date_obj.toLocaleFormat('%H:%M');",
+                                            "        }",
+                                            "        else",
+                                            "            return \"\";",
+                                            "        ",
+                                            "    },",
+                                            "    rotation:{degrees:-45}",
+                                            "    ",
+                                            "}"
+                                        ],
+                                        "title": "Время"
+                                    },
+                                    "designerId": "f0516c2c-b2f7-4cb2-9a51-90f59fe9d358",
+                                    "customConfigs": [
+                                        {
+                                            "group": "(Custom Properties)",
+                                            "name": "dateFormat",
+                                            "type": "string"
+                                        }
+                                    ]
+                                },
+                                {
+                                    "type": "Ext.chart.series.Line",
+                                    "reference": {
+                                        "name": "series",
+                                        "type": "array"
+                                    },
+                                    "codeClass": null,
+                                    "userConfig": {
+                                        "axis": [
+                                            "left"
+                                        ],
+                                        "showMarkers": false,
+                                        "smooth": 3,
+                                        "style": [
+                                            "{",
+                                            "    stroke: '#F02431',",
+                                            "    'stroke-width': 1,",
+                                            "    fill: '#F02431'",
+                                            "}"
+                                        ],
+                                        "title": [
+                                            "max_humid"
+                                        ],
+                                        "xField": "date",
+                                        "yField": [
+                                            "humid_max"
+                                        ]
+                                    },
+                                    "designerId": "26f558bf-0854-4992-9395-bf3a071d85aa"
+                                },
+                                {
+                                    "type": "Ext.chart.series.Line",
+                                    "reference": {
+                                        "name": "series",
+                                        "type": "array"
+                                    },
+                                    "codeClass": null,
+                                    "userConfig": {
+                                        "axis": [
+                                            "left"
+                                        ],
+                                        "showMarkers": false,
+                                        "smooth": 3,
+                                        "style": [
+                                            "{",
+                                            "    stroke: '#F02431',",
+                                            "    'stroke-width': 1,",
+                                            "    fill: '#F02431'",
+                                            "}"
+                                        ],
+                                        "title": [
+                                            "min_humid"
+                                        ],
+                                        "xField": "date",
+                                        "yField": [
+                                            "humid_min"
+                                        ]
+                                    },
+                                    "designerId": "eaa656ca-7ae3-45c2-924c-47b479af7518"
+                                },
+                                {
+                                    "type": "Ext.chart.series.Area",
+                                    "reference": {
+                                        "name": "series",
+                                        "type": "array"
+                                    },
+                                    "codeClass": null,
+                                    "userConfig": {
+                                        "axis": [
+                                            "right"
+                                        ],
+                                        "highlight": [
+                                            "{",
+                                            "    fill: 'red',",
+                                            "    'stroke-width': 2,",
+                                            "    stroke: 'red'",
+                                            "}"
+                                        ],
+                                        "style": [
+                                            "{",
+                                            "    fill: \"#1DED49\",",
+                                            "    stroke: \"#1DED49\",",
+                                            "    'stroke-width': 3,",
+                                            "    opacity: 0.0",
+                                            "}"
+                                        ],
+                                        "tips": [
+                                            "{",
+                                            "    trackMouse:true,",
+                                            "    width: 160,",
+                                            "    height: 70,",
+                                            " ",
+                                            "    renderer:function(storeItem, item)",
+                                            "    {",
+                                            "       ",
+                                            "        ",
+                                            "        var date_obj = new Date();",
+                                            "        date_obj.setTime (Date.parse(storeItem.get('date')));",
+                                            "                                                    ",
+                                            "        //console.log(storeItem.get('date'));",
+                                            "        ",
+                                            "        this.setTitle('<br> Влажность: ' + storeItem.get('humid_data') + '<br />' + 'Температура: ' + storeItem.get('temperature_data') + '°<br />' +  date_obj.toLocaleFormat('%d.%m.%y %H:%M:%S'));",
+                                            "        ",
+                                            "//        this.setTitle('<br>' + storeItem.get('humid_data') + '<br />' + date_obj.toLocaleFormat('%d.%m.%y %H:%M:%S'));",
+                                            "    }",
+                                            "}"
+                                        ],
+                                        "xField": "date",
+                                        "yField": [
+                                            "x"
+                                        ]
+                                    },
+                                    "designerId": "0575f42f-5d18-464b-85cd-545a5ea6b6ad"
+                                },
+                                {
+                                    "type": "Ext.chart.series.Line",
+                                    "reference": {
+                                        "name": "series",
+                                        "type": "array"
+                                    },
+                                    "codeClass": null,
+                                    "userConfig": {
+                                        "axis": [
+                                            "left"
+                                        ],
+                                        "markerConfig": [
+                                            "{",
+                                            "    type: 'circle'",
+                                            "}"
+                                        ],
+                                        "smooth": 10,
+                                        "style": [
+                                            "{",
+                                            "    fill: \"#C1C1BF\",",
+                                            "    stroke: \"#C1C1BF\",",
+                                            "",
+                                            "    ",
+                                            "    //fill: \"#1DED49\",",
+                                            "    //stroke: \"#1DED49\",",
+                                            "    'stroke-width': 3,",
+                                            "    opacity: 0.8",
+                                            "}"
+                                        ],
+                                        "title": [
+                                            "Humid"
+                                        ],
+                                        "xField": "date",
+                                        "yField": [
+                                            "humid_data"
+                                        ]
+                                    },
+                                    "designerId": "dcd4838b-8918-4914-9044-6597a87706fe",
+                                    "cn": [
+                                        {
+                                            "type": "fixedfunction",
+                                            "reference": {
+                                                "name": "items",
+                                                "type": "array"
+                                            },
+                                            "codeClass": null,
+                                            "userConfig": {
+                                                "designer|params": [
+                                                    "sprite",
+                                                    "record",
+                                                    "attributes",
+                                                    "index",
+                                                    "store"
+                                                ],
+                                                "fn": "renderer",
+                                                "implHandler": [
+                                                    "var r = store.getAt(index);",
+                                                    "",
+                                                    "if (r)",
+                                                    "{",
+                                                    "",
+                                                    "    var max_humid = r.get('humid_max');",
+                                                    "    var min_humid = r.get('humid_min');",
+                                                    "    var humid = r.get('humid_data');",
+                                                    "",
+                                                    "    if (max_humid < humid || min_humid > humid)",
+                                                    "        attributes.fill = '#A90F0F';",
+                                                    "}",
+                                                    "",
+                                                    "",
+                                                    "",
+                                                    "return attributes;"
+                                                ]
+                                            },
+                                            "designerId": "b6a5353d-7eea-44a5-951d-6a37d33a5a6e"
+                                        }
+                                    ]
+                                }
+                            ]
+                        }
+                    ]
+                }
+            ]
+        }
+    ]
+}

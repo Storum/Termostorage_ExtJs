@@ -1,0 +1,100 @@
+{
+    "type": "Ext.data.Model",
+    "reference": {
+        "name": "items",
+        "type": "array"
+    },
+    "codeClass": null,
+    "userConfig": {
+        "designer|userClassName": "model_temperature"
+    },
+    "designerId": "a92c8b60-cfdf-40ce-9b2f-5b50340b9459",
+    "cn": [
+        {
+            "type": "Ext.data.Field",
+            "reference": {
+                "name": "fields",
+                "type": "array"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "dateFormat": null,
+                "name": "date",
+                "type": "string"
+            },
+            "designerId": "8d3961e6-3c33-4f8d-8844-bb5754d4d406",
+            "customConfigs": [
+                {
+                    "group": "(Custom Properties)",
+                    "name": "fi",
+                    "type": "string"
+                }
+            ]
+        },
+        {
+            "type": "Ext.data.Field",
+            "reference": {
+                "name": "fields",
+                "type": "array"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "name": "temperature_min",
+                "type": "float"
+            },
+            "designerId": "76caa1ef-45ee-4e2d-9bbe-e3239c899915"
+        },
+        {
+            "type": "Ext.data.Field",
+            "reference": {
+                "name": "fields",
+                "type": "array"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "name": "temperature_max",
+                "type": "float"
+            },
+            "designerId": "aefb274e-c3d8-419b-a5e8-f263f3d6f640"
+        },
+        {
+            "type": "Ext.data.Field",
+            "reference": {
+                "name": "fields",
+                "type": "array"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "name": "temperature_data",
+                "type": "float"
+            },
+            "designerId": "b4025a01-a89c-4cd5-9724-3625f575386c"
+        },
+        {
+            "type": "Ext.data.Field",
+            "reference": {
+                "name": "fields",
+                "type": "array"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "name": "humid_data",
+                "type": "float"
+            },
+            "designerId": "89b5094c-6491-4c48-97a3-208b981a5ee0"
+        },
+        {
+            "type": "Ext.data.Field",
+            "reference": {
+                "name": "fields",
+                "type": "array"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "name": "x",
+                "type": "float"
+            },
+            "designerId": "48b4060a-fa00-472a-8d8b-0215b8948940"
+        }
+    ]
+}

@@ -1,0 +1,13 @@
+{
+    "type": "jsresource",
+    "reference": {
+        "name": "items",
+        "type": "array"
+    },
+    "codeClass": null,
+    "userConfig": {
+        "designer|userClassName": "js2",
+        "url": "app/GlobalVars.js"
+    },
+    "designerId": "19792f97-d100-45cf-ae7d-5cc0dee38686"
+}

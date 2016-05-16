@@ -1,0 +1,15 @@
+{
+    "type": "Ext.form.Label",
+    "reference": {
+        "name": "items",
+        "type": "array"
+    },
+    "codeClass": null,
+    "userConfig": {
+        "cls": null,
+        "designer|userAlias": "mylabel",
+        "designer|userClassName": "MyLabel",
+        "text": "Выгрузка:"
+    },
+    "designerId": "0a2a7572-3f4f-4b54-bfe4-65803c556659"
+}

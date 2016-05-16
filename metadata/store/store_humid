@@ -1,0 +1,36 @@
+{
+    "type": "Ext.data.Store",
+    "reference": {
+        "name": "items",
+        "type": "array"
+    },
+    "codeClass": null,
+    "userConfig": {
+        "designer|userClassName": "store_humid",
+        "model": "model_humid",
+        "storeId": "store_humid"
+    },
+    "designerId": "79f53f30-1952-40fa-a51f-13cf8e752927",
+    "cn": [
+        {
+            "type": "basiceventbinding",
+            "reference": {
+                "name": "listeners",
+                "type": "array"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "fn": "onStoreDataChangeD",
+                "implHandler": [
+                    "var chart = Ext.getCmp('id_humid_chart');",
+                    "",
+                    "if (chart)",
+                    "    chart.setLoading(false);"
+                ],
+                "name": "datachanged",
+                "scope": "me"
+            },
+            "designerId": "cda100d6-ecbf-4f75-b28f-58e4c1ae3019"
+        }
+    ]
+}

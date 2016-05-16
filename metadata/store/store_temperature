@@ -1,0 +1,36 @@
+{
+    "type": "Ext.data.Store",
+    "reference": {
+        "name": "items",
+        "type": "array"
+    },
+    "codeClass": null,
+    "userConfig": {
+        "designer|userClassName": "store_temperature",
+        "model": "model_temperature",
+        "storeId": "store_temp"
+    },
+    "designerId": "6206edef-fb41-43b4-8ef2-d7a2dae7feb8",
+    "cn": [
+        {
+            "type": "basiceventbinding",
+            "reference": {
+                "name": "listeners",
+                "type": "array"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "fn": "onStoreDataChangeD",
+                "implHandler": [
+                    "var chart = Ext.getCmp('id_temperature_chart');",
+                    "",
+                    "if (chart)",
+                    "    chart.setLoading(false);"
+                ],
+                "name": "datachanged",
+                "scope": "me"
+            },
+            "designerId": "84cab74d-72a8-47f6-95db-391ce73254f8"
+        }
+    ]
+}
