@@ -91,7 +91,7 @@ Ext.application({
                 xtype : "component",
                 autoEl : {
                     tag : "iframe",
-                    src : "http://hosting.wialon.com/login.html?redirect_uri=" + GlobalVars.url_setting + " &duration=86400"
+                    src : "http://hosting.wialon.com/login.html?redirect_uri=" + GlobalVars.url_setting + "&duration=86400"
                     //src : "http://hosting.wialon.com/login.html?redirect_uri=http://localhost/xxx/&duration=86400"
                 }
                 }]

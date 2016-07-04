@@ -336,7 +336,19 @@ Ext.define('Termo.view.MainView', {
                                                                                                 
                                                     //console.log(storeItem.get('date'));
                                                     
-                                                    this.setTitle('<br> Температура: ' + storeItem.get('temperature_data') + '°<br />' + 'Влажность: ' + storeItem.get('humid_data') + '<br />' +  date_obj.toLocaleFormat('%d.%m.%y %H:%M:%S'));
+                                                    var temperature_value = storeItem.get('temperature_data');
+                                                    var humid_value = storeItem.get('humid_data');
+                                                    
+                                                    if (temperature_value > 1000)
+                                                        temperature_value = "_";
+                                                    
+                                                    
+                                                    if (humid_value > 1000)
+                                                        humid_value = "_";
+                                                    
+                                                    
+                                                    
+                                                    this.setTitle('<br> Температура: ' + temperature_value + '°<br />' + 'Влажность: ' + humid_value + '<br />' +  date_obj.toLocaleFormat('%d.%m.%y %H:%M:%S'));
                                                 }
                                             },
                                             axis: 'right',
@@ -553,7 +565,19 @@ Ext.define('Termo.view.MainView', {
                                                                                                 
                                                     //console.log(storeItem.get('date'));
                                                     
-                                                    this.setTitle('<br> Влажность: ' + storeItem.get('humid_data') + '<br />' + 'Температура: ' + storeItem.get('temperature_data') + '°<br />' +  date_obj.toLocaleFormat('%d.%m.%y %H:%M:%S'));
+                                                    var temperature_value = storeItem.get('temperature_data');
+                                                    var humid_value = storeItem.get('humid_data');
+                                            
+                                                    if (temperature_value > 1000)
+                                                        temperature_value = "_";
+                                                    
+                                                    
+                                                    if (humid_value > 1000)
+                                                        humid_value = "_";
+                                                    
+                                                    
+                                                        
+                                                    this.setTitle('<br> Влажность: ' + humid_value + '<br />' + 'Температура: ' + temperature_value + '°<br />' +  date_obj.toLocaleFormat('%d.%m.%y %H:%M:%S'));
                                                     
                                             //        this.setTitle('<br>' + storeItem.get('humid_data') + '<br />' + date_obj.toLocaleFormat('%d.%m.%y %H:%M:%S'));
                                                 }

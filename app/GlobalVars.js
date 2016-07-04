@@ -21,7 +21,7 @@ Ext.define('GlobalVars',
     current_runner: null,
     current_task: null,
     
-//	url_setting: 'http://termostorage.ru/'
-	url_setting: 'http://localhost/xxx/'
+	url_setting: 'http://termostorage.ru/'
+//	url_setting: 'http://localhost/xxx/'
     //token: 'f16039bab187c0ef5aaf68cb1f7278765649B313D817930E0238A7EC84AA6645CFA75E1'
 });

@@ -531,7 +531,6 @@ Ext.define('Termo.Utilities', {
         {
             var data = [];
             var date = new Date();
-            var i = 0;
             
             for (var next_data in Report_data)
             {
@@ -558,7 +557,7 @@ Ext.define('Termo.Utilities', {
             
             for (var next_data in Report_data)
             {
-                if (Math.abs(Report_data[next_data].c['2']) > 100000)
+                if (Math.abs(Report_data[next_data].c['1']) > 1000)
                     continue;
                 
                 date.setTime(Date.parse(Report_data[next_data].c['0']));
@@ -673,33 +672,37 @@ Ext.define('Termo.Utilities', {
 
             if (ba_humid.labels.length === 0)
             {
-            Ext.getCmp('id_humid_chart').getStore().loadData(
-            [{date:"01.01.2001 21:00:00",
-            humid_data:"0",
-            humid_max:"0",
-            humid_min:"0",
-            temperature_data:"0",
-             x:1000},
-            {date:"01.01.2001 21:00:01",
-            humid_data:"0",
-            humid_max:"0",
-            humid_min:"0",
-            temperature_data:"0",
-             x:1000}]);
+                Ext.getCmp('id_humid_chart').getStore().loadData(
+                [{date:"01.01.2001 21:00:00",
+                humid_data:"0",
+                humid_max:"0",
+                humid_min:"0",
+                temperature_data:"0",
+                 x:1000},
+                {date:"01.01.2001 21:00:01",
+                humid_data:"0",
+                humid_max:"0",
+                humid_min:"0",
+                temperature_data:"0",
+                 x:1000}]);
             
-            Ext.getCmp('id_temperature_chart').getStore().loadData(
-            [{date:"01.01.2001 21:00:00",
-            humid_data:"0",
-            humid_max:"0",
-            humid_min:"0",
-            temperature_data:"0",
-             x:1000},
-            {date:"01.01.2001 21:00:01",
-            humid_data:"0",
-            humid_max:"0",
-            humid_min:"0",
-            temperature_data:"0",
-             x:1000}]);
+            }
+            
+            if (ba_termo.labels.length === 0)
+            {
+                Ext.getCmp('id_temperature_chart').getStore().loadData(
+                [{date:"01.01.2001 21:00:00",
+                humid_data:"0",
+                humid_max:"0",
+                humid_min:"0",
+                temperature_data:"0",
+                 x:1000},
+                {date:"01.01.2001 21:00:01",
+                humid_data:"0",
+                humid_max:"0",
+                humid_min:"0",
+                temperature_data:"0",
+                 x:1000}]);
             }
 
             
